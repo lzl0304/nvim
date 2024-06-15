@@ -2,6 +2,9 @@
 vim.g.encoding = 'UTF-8'
 vim.o.fileencoding = 'utf-8'
 
+-- go to start of line after 'gg'
+vim.o.startofline = true
+
 -- line number
 vim.wo.number = true
 vim.wo.relativenumber = false
