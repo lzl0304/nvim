@@ -38,7 +38,11 @@ vim.o.splitright = true
 
 -- list
 vim.o.list = false
-vim.opt.listchars = 'space:·,tab:··'
+vim.opt.listchars:append {
+    tab = "▸ ",
+    eol = "↵",
+    space = "·",
+}
 
 -- clipboard
 vim.opt.clipboard = 'unnamedplus'

@@ -2,19 +2,21 @@ return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
+        "hrsh7th/cmp-emoji",
         "hrsh7th/cmp-path",
         "hrsh7th/vim-vsnip",
         "hrsh7th/cmp-vsnip",
         "hrsh7th/cmp-buffer",
-        -- "hrsh7th/cmp-cmdline",
+        "hrsh7th/cmp-cmdline",
         "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-nvim-lua",
         "hrsh7th/cmp-nvim-lsp-signature-help"
     },
     config = function()
         local cmp = require("cmp")
         cmp.setup({
             completion = {
-                keyword_length = 2
+                keyword_length = 3
             },
             mapping = cmp.mapping.preset.insert({
                 ["<Tab>"] = function(fallback)
@@ -38,12 +40,12 @@ return {
                 ['<CR>'] = cmp.mapping.confirm({ select = true }),
             }),
             sources = {
-                { name = "path" },
-                { name = 'vsnip' },
+                { name = "emoji" },
                 { name = "buffer" },
-                { name = "cmdline" },
                 { name = "nvim_lsp" },
-                { name = 'nvim_lsp_signature_help' }
+                { name = "nvim_lua" },
+                { name = "path" },
+                { name = "treesitter" },
             },
         })
     end,
