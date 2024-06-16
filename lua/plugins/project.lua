@@ -5,7 +5,12 @@ return {
             require("project_nvim").setup {
                 active = true,
                 detection_methods = { "pattern" },
-                patterns = { ".git", "CMakeLists.txt", "Makefile", "package.json" },
+                patterns = {
+                    ".git",
+                    "Cargo.toml",
+                    "Makefile",
+                    "package.json"
+                },
             }
         end
     }
