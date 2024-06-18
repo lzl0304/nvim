@@ -7,7 +7,15 @@ return {
 
             lsp.clangd.setup {}
             lsp.pyright.setup {}
-            lsp.rust_analyzer.setup {}
+            lsp.rust_analyzer.setup {
+                settings = {
+                    ["rust-analyzer"] = {
+                        checkOnSave = {
+                            command = "clippy"
+                        }
+                    }
+                }
+            }
             lsp.tsserver.setup {}
         end,
     }
