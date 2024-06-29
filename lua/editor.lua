@@ -10,7 +10,7 @@ vim.wo.number = true
 vim.wo.relativenumber = false
 
 -- column line
-vim.wo.colorcolumn = '80'
+vim.wo.colorcolumn = '100'
 
 -- indent
 vim.opt.tabstop = 4

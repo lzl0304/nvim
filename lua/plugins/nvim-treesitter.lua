@@ -9,16 +9,20 @@ return {
                     "css",
                     "go",
                     "html",
-                    "json",
                     "javascript",
+                    "json",
                     "markdown",
                     "python",
-                    "rust"
+                    "rust",
+                    "typescript",
                 },
                 highlight = {
                     enable = true,
                 },
                 indent = { enable = true, disable = { "python" } },
+                autopairs = {
+                    enable = true
+                },
                 autotag = {
                     enable = true,
                 },
