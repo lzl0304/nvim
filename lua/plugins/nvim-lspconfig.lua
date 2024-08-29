@@ -1,3 +1,5 @@
+-- https://github.com/neovim/nvim-lspconfig
+
 return {
     {
         "neovim/nvim-lspconfig",
@@ -7,15 +9,7 @@ return {
 
             lsp.clangd.setup {}
             lsp.pyright.setup {}
-            lsp.rust_analyzer.setup {
-                settings = {
-                    ["rust-analyzer"] = {
-                        checkOnSave = {
-                            command = "clippy"
-                        }
-                    }
-                }
-            }
+            lsp.rust_analyzer.setup {}
             lsp.tsserver.setup {}
         end,
     }

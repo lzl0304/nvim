@@ -1,3 +1,5 @@
+-- https://github.com/nvimdev/dashboard-nvim
+
 return {
     {
         "nvimdev/dashboard-nvim",
@@ -50,7 +52,7 @@ return {
                     footer = {
                         "",
                         "",
-                        '来世不可待，往世不可追。',
+                        '平淡好过烦恼',
                         "",
                         'NeoVim ' .. 'v' .. vim.version().major .. '.' .. vim.version().minor .. '.' .. vim.version().patch,
                     },

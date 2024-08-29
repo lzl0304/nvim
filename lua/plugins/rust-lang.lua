@@ -1,3 +1,5 @@
+-- https://github.com/rust-lang/rust.vim
+
 return {
     {
         'rust-lang/rust.vim',

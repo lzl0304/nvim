@@ -1,3 +1,5 @@
+-- https://github.com/ahmedkhalf/project.nvim
+
 return {
     {
         'ahmedkhalf/project.nvim',

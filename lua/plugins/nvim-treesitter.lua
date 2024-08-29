@@ -1,3 +1,5 @@
+-- https://github.com/nvim-treesitter/nvim-treesitter
+
 return {
     {
         "nvim-treesitter/nvim-treesitter",
@@ -9,20 +11,16 @@ return {
                     "css",
                     "go",
                     "html",
-                    "javascript",
                     "json",
+                    "javascript",
                     "markdown",
                     "python",
-                    "rust",
-                    "typescript",
+                    "rust"
                 },
                 highlight = {
                     enable = true,
                 },
                 indent = { enable = true, disable = { "python" } },
-                autopairs = {
-                    enable = true
-                },
                 autotag = {
                     enable = true,
                 },
