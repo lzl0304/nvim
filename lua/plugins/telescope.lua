@@ -25,6 +25,7 @@ return {
                         ".git",
                         ".idea",
                         ".vscode",
+                        "cmake-build-debug",
                         "dist",
                         "node_modules",
                     }

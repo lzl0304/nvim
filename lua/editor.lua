@@ -1,67 +1,73 @@
--- encoding
-vim.g.encoding = 'UTF-8'
-vim.o.fileencoding = 'utf-8'
+local g = vim.g
+local opt = vim.opt
 
--- go to start of line after 'gg'
-vim.o.startofline = true
+g.encoding = "utf-8"
 
--- line number
-vim.wo.number = true
-vim.wo.relativenumber = false
+opt.background = "dark"
+opt.colorcolumn = "100"
+opt.completeopt = "menu,menuone,noselect"
+opt.filetype = "plugin"
+opt.mouse = "a"
+opt.mousescroll = "ver:2,hor:4"
+opt.showmatch = true
+opt.syntax = "on"
 
--- column line
-vim.wo.colorcolumn = '100'
+opt.pumheight = 10
+opt.signcolumn = "yes"
+opt.spell = true
+opt.spelllang = { "en_us" }
+
+-- file encoding
+opt.fileencoding = "utf-8"
+
+-- number
+opt.number = true
+opt.numberwidth = 2
+opt.relativenumber = true
+
+-- backup file
+opt.backup = false
+opt.backupcopy = "yes"
+opt.swapfile = false
+opt.writebackup = false
 
 -- indent
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+opt.autoindent = true
+opt.expandtab = true
+opt.shiftwidth = 4
+opt.smartindent = true
+opt.softtabstop = 4
+opt.tabstop = 4
 
--- jkhl 移动时光标周围保留8行
-vim.o.scrolloff = 8
-vim.o.sidescrolloff = 8
-
--- highlight row
-vim.wo.cursorline = true
-
--- signcolumn
-vim.wo.signcolumn = 'yes'
-
--- mouse
-vim.o.mouse = 'a'
+-- jkhl scrolling
+opt.scrolloff = 8
+opt.sidescrolloff = 8
 
 -- split
-vim.o.splitbelow = true
-vim.o.splitright = true
+opt.splitbelow = true
+opt.splitright = true
 
--- list
-vim.o.list = false
-vim.opt.listchars:append {
-    tab = "▸ ",
+-- list chars
+opt.list = false
+opt.listchars:append {
     eol = "↵",
     space = "·",
+    tab = "▸ ",
+    trail = "·",
 }
 
 -- clipboard
-vim.opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
--- don't create backup file (swap file)
-vim.opt.backup = false
-vim.opt.writebackup = false
-vim.opt.backupcopy = "yes"
-vim.opt.swapfile = false
+-- go to start of line after 'gg'
+opt.startofline = true
 
--- file type
-vim.opt.filetype = "plugin"
+-- search
+opt.hlsearch = true
+opt.ignorecase = true
+opt.smartcase = true
 
--- 补全最多显示10行
-vim.o.pumheight = 10
-
--- 自动补全不自动选中
-vim.opt.completeopt = "menu,menuone,noselect"
-
--- 拼写检查
-vim.opt.spelllang = "en_us"
-vim.opt.spell = true
+-- cursor
+opt.cursorline = true
+opt.cursorlineopt = "screenline"
+opt.termguicolors = true

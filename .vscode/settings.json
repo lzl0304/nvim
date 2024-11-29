@@ -1,3 +1,5 @@
 {
-  "Lua.diagnostics.globals": ["vim"]
+  "Lua.diagnostics.disable": ["undefined-global", "lowercase-global"],
+  "Lua.diagnostics.globals": ["vim"],
+  "Lua.runtime.version": "Lua 5.4",
 }
