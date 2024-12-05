@@ -2,10 +2,11 @@ local g = vim.g
 local opt = vim.opt
 
 g.encoding = "utf-8"
+g.mapleader = " "
 
 opt.background = "dark"
 opt.colorcolumn = "100"
-opt.completeopt = "menu,menuone,noselect"
+opt.completeopt = { "menu", "menuone", "noselect" }
 opt.filetype = "plugin"
 opt.mouse = "a"
 opt.mousescroll = "ver:2,hor:4"
@@ -23,9 +24,10 @@ opt.fileencoding = "utf-8"
 -- number
 opt.number = true
 opt.numberwidth = 2
-opt.relativenumber = true
+opt.relativenumber = false
 
 -- backup file
+opt.autoread = true
 opt.backup = false
 opt.backupcopy = "yes"
 opt.swapfile = false

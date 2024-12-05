@@ -6,13 +6,20 @@ return {
     dependencies = {
         "hrsh7th/cmp-emoji",
         "hrsh7th/cmp-path",
-        "hrsh7th/vim-vsnip",
-        "hrsh7th/cmp-vsnip",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-cmdline",
         "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-nvim-lua",
-        "hrsh7th/cmp-nvim-lsp-signature-help"
+        {
+            "L3MON4D3/LuaSnip",
+            version = "v2.*",
+            build = "make install_jsregexp",
+            config = function()
+                -- require("luasnip.loaders.from_vscode").lazy_load()
+                local snippets_path = vim.fn.stdpath("config") .. "/snippets/"
+                require("luasnip.loaders.from_vscode").load({ paths = snippets_path })
+            end
+        },
+        "saadparwaiz1/cmp_luasnip"
     },
     config = function()
         local cmp = require("cmp")
@@ -41,13 +48,17 @@ return {
                 ['<C-e>'] = cmp.mapping.abort(),
                 ['<CR>'] = cmp.mapping.confirm({ select = true }),
             }),
+            snippet = {
+                expand = function(args)
+                    require('luasnip').lsp_expand(args.body)
+                end,
+            },
             sources = {
                 { name = "emoji" },
                 { name = "buffer" },
+                { name = "luasnip" },
                 { name = "nvim_lsp" },
-                { name = "nvim_lua" },
                 { name = "path" },
-                { name = "treesitter" },
             },
         })
     end,

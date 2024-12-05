@@ -55,6 +55,7 @@ return {
                         '平淡好过烦恼',
                         "",
                         'NeoVim ' .. 'v' .. vim.version().major .. '.' .. vim.version().minor .. '.' .. vim.version().patch,
+                        "Config path" .. ": " .. vim.fn.stdpath("config"),
                     },
                 },
             }
